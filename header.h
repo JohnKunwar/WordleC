@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 // variable
-extern char WORD[6];
+extern char WORD[5];
 
 // function
 void intro(void);

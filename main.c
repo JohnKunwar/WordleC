@@ -1,5 +1,6 @@
-#include "header.h"
+// Main file of the wordle
 
+#include "header.h"
 
 int main(void)
 {
