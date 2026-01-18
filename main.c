@@ -6,6 +6,6 @@ int main(void)
 {
     intro();
     word_select();
-    printf("%s\n", WORD);
+    game();
     return 0;
 }
