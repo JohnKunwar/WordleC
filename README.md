@@ -16,16 +16,6 @@ web-based game so, feedback is provided by changing tile-colour.
 		   where '*' indicates it is correct possition '-' indicates letter doesn't exist in the word
 		   and '#" indicates wrong placement.
 
-for e.g
-
-__        __            _ _                       ____ 
-\ \      / /__  _ __ __| | | ___    ___  _ __    / ___|
- \ \ /\ / / _ \| '__/ _` | |/ _ \  / _ \| '_ \  | |    
-  \ V  V / (_) | | | (_| | |  __/ | (_) | | | | | |___ 
-   \_/\_/ \___/|_|  \__,_|_|\___|  \___/|_| |_|  \____|
-
-----------------------------------------------------------
-
 Symbols:
 # - indicates BLANKS or GREY block
 # * indicates GREEN block
@@ -47,20 +37,3 @@ feed back:                        -#*--
 Enter Your word:                  SPORT
 feed back:                        *****
 
-__   _____  _   _  __        _____  _   _  
-\ \ / / _ \| | | | \ \      / / _ \| \ | | 
- \ V / | | | | | |  \ \ /\ / / | | |  \| | 
-  | || |_| | |_| |   \ V  V /| |_| | |\  | 
-  |_| \___/ \___/     \_/\_/  \___/|_| \_| 
-
-
-
-__   _____  _   _   _     ___  ____  _____  
-\ \ / / _ \| | | | | |   / _ \/ ___|| ____| 
- \ V / | | | | | | | |  | | | \___ \|  _|   
-  | || |_| | |_| | | |__| |_| |___) | |___  
-  |_| \___/ \___/  |_____\___/|____/|_____| 
-
-Letter was ->                SPORT
-
-play-again yes/no:                Y/N
