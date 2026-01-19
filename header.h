@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
+#include <string.h>
+#include <unistd.h>
 
 // variable
 extern char WORD[5];
-
+extern bool Game_on;
 // function
 void intro(void);
 void won_celeberation();

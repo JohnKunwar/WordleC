@@ -2,10 +2,15 @@
 
 #include "header.h"
 
+bool Game_on = true;
 int main(void)
 {
     intro();
-    word_select();
-    game();
+
+    while(Game_on)
+	{
+	    word_select();
+	    game();
+	}
     return 0;
 }
