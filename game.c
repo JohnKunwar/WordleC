@@ -94,7 +94,6 @@ int game()
     bool won = false;
 
     printf("\n\t\t\t***************GAME BEGINS******************\n\n");
-    printf("%s\n", WORD);
     
     for (int i = 1; i <= 6; i++)
 	{
@@ -113,6 +112,7 @@ int game()
 	    
 	    if (strcmp(stage, win_stage) == 0)
 		{
+		    printf("\n\nYour guess was correct the word was %s\n", WORD);
 		    won_celeberation();
 		    won = true;
 		    break;
@@ -120,7 +120,11 @@ int game()
 	}
     
     if (won == false)
-	loss_celeberation();
+	{
+	    	loss_celeberation();
+		printf("\n\n The correct word was  %s\n", WORD);
+	}
+
     
     return 0;
 }

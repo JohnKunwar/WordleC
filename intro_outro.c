@@ -10,7 +10,10 @@ __        __            _ _                       ____          \n \
   \\ V  V / (_) | | | (_| | |  __/ | (_) | | | | | |___          \n \
    \\_/\\_/ \\___/|_|  \\__,_|_|\\___|  \\___/|_| |_|  \\____|         \n \
 =======================================================================\n\n\n");
-	   
+
+    printf("SYMBOLS:\n \t * -> Your guessed is correct in that position \n \
+\t # -> Your guessed is correct but wrong position \n \
+\t _ -> Your guessed is incorrect\n");
 
 }
 
