@@ -5,7 +5,7 @@ correct position, whether it exist on the word or whether it doesn't exist in th
 web-based game so, feedback is provided by changing tile-colour.
 
 # Game photo
-[game] (./game.png)
+[game] (https://github.com/JohnKunwar/WordleC/blob/main/game.png)
 
 # Reference
 word-list -> [All words](https://gist.github.com/slushman/34e60d6bc479ac8fc698df8c226e4264#file-wordle-list)
