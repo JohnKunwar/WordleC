@@ -51,5 +51,7 @@ void word_select()
 		    exit(2);
 		}
 	}
+
+
     fclose(f);
 }

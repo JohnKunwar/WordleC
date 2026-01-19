@@ -52,19 +52,53 @@ void lowercase(char word[])
 	}
 }
 
+// change the game stage
+void change_stage(char stage[], char guess_word[])
+{
+    int i, j;
+    int count_letter[5] = {0};
+    for (i = 0; i < 5; i++)
+	{
+	    if (guess_word[i] == WORD[i])
+		{
+		    stage[i] = '*';
+		}
+	}
+
+    for (i = 0; i < 5; i++)
+	{
+	    if (stage[i] != '*')
+		{
+		    for(j = 0; j < 5; j++)
+			{
+			    if (stage[j] == '*')
+				continue;
+			    if (guess_word[i] == WORD[j] && count_letter[j] == 0)
+				{
+				    count_letter[j] = 1;
+				    stage[i] = '#';
+				}
+			    
+			}
+		}
+	}
+}
+
 // Main instance of game
 int game()
 {
-    char stage[] = "_____";
+
     char guessed_word[6];
     bool valid_word = false;
+    char win_stage[] = "*****";
+    bool won = false;
 
     printf("\n\t\t\t***************GAME BEGINS******************\n\n");
-
+    printf("%s\n", WORD);
+    
     for (int i = 1; i <= 6; i++)
 	{
-	    display(stage);
-
+	    char stage[] = "_____";	        
 	    // getting input from the user and checking if the word is valid or not
 	    do {
 		printf("Enter your word (%i): ", i);
@@ -74,7 +108,19 @@ int game()
 	    }while (!valid_word);
 	    
 	    display(guessed_word);
-//	    change_stage(stage, guessed_word);
+	    change_stage(stage, guessed_word); // function to change the stage #, *, _
+	    display(stage);
+	    
+	    if (strcmp(stage, win_stage) == 0)
+		{
+		    won_celeberation();
+		    won = true;
+		    break;
+		}
 	}
+    
+    if (won == false)
+	loss_celeberation();
+    
     return 0;
 }
