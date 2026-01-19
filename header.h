@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdbool.h>
 #include <string.h>
-#include <unistd.h>
+
 
 // variable
 extern char WORD[5];
