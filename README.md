@@ -9,8 +9,10 @@ web-based game so, feedback is provided by changing tile-colour.
 
 
 # To run
-Just clone this respority and built with makefile
+Just clone this respority and built with makefile. Built and play
 
 # Reference
 word-list -> [All words](https://gist.github.com/slushman/34e60d6bc479ac8fc698df8c226e4264#file-wordle-list)
 
+
+If you find bug report it :(
