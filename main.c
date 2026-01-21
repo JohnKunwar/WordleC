@@ -6,7 +6,7 @@ bool Game_on = true;
 int main(void)
 {
     intro();
-    int play_again;
+    int play_again = 3;
     while(Game_on)
 	{
 	    word_select();
