@@ -1,15 +1,24 @@
 // Instance of a single game
 #include "header.h"
 
+
+int color_select[5] = {0, 0, 0, 0, 0}; // 0 means red 1 means green and 2 means yellow
 // function to display in a wordle format
 void display(char stage[])
 {
     printf("\t\t\t\t\t");
     for (int i = 0; i < 5; i++)
 	{
+	    if (color_select[i] == 0)
+		printf(RED);
+	    else if (color_select[i] == 1)
+		printf(GREEN);
+	    else
+		printf(YELLOW);
+	    
 	    printf("%c ", stage[i]);
 	}
-    printf("\n");
+    printf(COLOR_RESET"\n");
 }
 
 // valid vord check function
@@ -62,6 +71,7 @@ void change_stage(char stage[], char guess_word[])
 	    if (guess_word[i] == WORD[i])
 		{
 		    stage[i] = '*';
+		    color_select[i] = 1;
 		}
 	}
 
@@ -77,6 +87,7 @@ void change_stage(char stage[], char guess_word[])
 				{
 				    count_letter[j] = 1;
 				    stage[i] = '#';
+				    color_select[i] = 2;
 				}
 			    
 			}
@@ -97,17 +108,21 @@ int game()
     
     for (int i = 1; i <= 6; i++)
 	{
-	    char stage[] = "_____";	        
-	    // getting input from the user and checking if the word is valid or not
+	    
+	    char stage[] = "_____";   // reseting format string
+	    // reseting colour_select
+	    for(int j = 0; j < 5; j++)
+		color_select[j] = 0;
+	    
+	   // getting input from the user and checking if the word is valid or not
 	    do {
 		printf("Enter your word (%i): ", i);
 		scanf("%s", guessed_word);
 		lowercase(guessed_word);
 		valid_word = check_word(guessed_word);
 	    }while (!valid_word);
-	    
-	    display(guessed_word);
 	    change_stage(stage, guessed_word); // function to change the stage #, *, _
+	    display(guessed_word);	    
 	    display(stage);
 	    
 	    if (strcmp(stage, win_stage) == 0)
